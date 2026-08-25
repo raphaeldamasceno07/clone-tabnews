@@ -9,7 +9,6 @@ async function cleanDatabase() {
 test("GET to /api/v1/migrations returns status 200", async () => {
   const response = await fetch("http://localhost:3000/api/v1/migrations");
   expect(response.status).toBe(200);
-  console.log(response.status);
   const responseBody = await response.json();
 
   expect(Array.isArray(responseBody)).toBe(true);
